@@ -27,6 +27,7 @@ function onSubmit(event) {
   const queryText = event.target.elements['search-text'].value.trim();
   if (!queryText) {
     iziToast.show({ message: 'Please enter query', ...toastParam });
+    event.target.reset();
     return;
   }
   showLoader();
