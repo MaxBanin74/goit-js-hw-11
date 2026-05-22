@@ -45,6 +45,7 @@ function onSubmit(event) {
       event.target.reset();
     })
     .catch(error => {
+      console.error(error);
       iziToast.show({
         message: 'Server Pixabay is not avialible',
         ...toastParam,
