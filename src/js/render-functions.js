@@ -57,9 +57,13 @@ export function createGallery(images) {
 }
 
 export function showLoader() {
-  loader.classList.toggle('loader');
+  if (loader) {
+    loader.classList.toggle('hidden');
+  }
 }
 
 export function hideLoader() {
-  loader.classList.toggle('loader');
+  if (loader) {
+    loader.classList.toggle('hidden');
+  }
 }

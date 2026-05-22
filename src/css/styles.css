@@ -9,7 +9,7 @@
 @import url('./base.css');
 @import url('./container.css');
 
-.visually-hidden {
+.hidden {
   position: absolute;
   width: 1px;
   height: 1px;
