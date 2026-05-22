@@ -16,6 +16,6 @@ function onSubmit(event) {
     iziToast.show({ message: 'Please enter query', ...toastParam });
     return;
   }
-  event.target.reset();
   getImagesByQuery(queryText);
+  event.target.reset();
 }
