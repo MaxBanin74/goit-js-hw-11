@@ -58,12 +58,12 @@ export function createGallery(images) {
 
 export function showLoader() {
   if (loader) {
-    loader.classList.toggle('hidden');
+    loader.classList.remove('hidden');
   }
 }
 
 export function hideLoader() {
   if (loader) {
-    loader.classList.toggle('hidden');
+    loader.classList.add('hidden');
   }
 }
