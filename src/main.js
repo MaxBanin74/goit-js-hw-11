@@ -30,7 +30,7 @@ function onSubmit(event) {
     return;
   }
   showLoader();
-  getImagesByQuery(queryText)
+  getImagesByQuery(queryElem.value)
     .then(response => {
       const photo = response.data.hits;
       if (!photo.length) {
