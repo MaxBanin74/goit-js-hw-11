@@ -27,7 +27,6 @@ function onSubmit(event) {
   const queryText = event.target.elements['search-text'].value.trim();
   if (!queryText) {
     iziToast.show({ message: 'Please enter query', ...toastParam });
-    event.target.reset();
     return;
   }
   showLoader();
@@ -45,7 +44,10 @@ function onSubmit(event) {
       createGallery(photo);
     })
     .catch(error => {
-      iziToast.show({ message: error, ...toastParam });
+      iziToast.show({
+        message: 'Server Pixabay is not avialible',
+        ...toastParam,
+      });
     })
     .finally(() => {
       hideLoader();
