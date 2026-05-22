@@ -24,9 +24,9 @@ form.addEventListener('submit', onSubmit);
 function onSubmit(event) {
   event.preventDefault();
   clearGallery();
-  const queryText = event.target.elements['search-text'].value.trim();
-  if (!queryText) {
-    iziToast.show({ message: 'Please enter query', ...toastParam });
+  const queryElem = event.target.elements['search-text'];
+  if (!queryElem.value.trim()) {
+    queryElem.value = '';
     return;
   }
   showLoader();
