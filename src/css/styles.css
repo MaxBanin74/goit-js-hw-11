@@ -9,6 +9,19 @@
 @import url('./base.css');
 @import url('./container.css');
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .form {
   padding: 10px;
   display: flex;
@@ -69,7 +82,8 @@
   border-style: dashed solid solid dotted;
   border-color: #ff3d00 #ff3d00 transparent #ff3d00;
   border-radius: 50%;
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   position: relative;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;

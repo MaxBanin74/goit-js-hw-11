@@ -2,6 +2,14 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
+const loader = document.querySelector('.loader');
+
+const galleryModal = new SimpleLightbox('.gallery a', {
+  captions: true,
+  captionsData: 'alt',
+  captionDelay: 250,
+  captionPosition: 'bottom',
+});
 
 export function clearGallery() {
   if (gallery) {
@@ -44,19 +52,14 @@ export function createGallery(images) {
     .join('');
   if (gallery) {
     gallery.insertAdjacentHTML('beforeend', galleryItems);
-    const galleryModal = new SimpleLightbox('.gallery a', {
-      captions: true,
-      captionsData: 'alt',
-      captionDelay: 250,
-      captionPosition: 'bottom',
-    });
+    galleryModal.refresh();
   }
 }
 
 export function showLoader() {
-  gallery.classList.toggle('loader');
+  loader.classList.toggle('loader');
 }
 
 export function hideLoader() {
-  gallery.classList.toggle('loader');
+  loader.classList.toggle('loader');
 }
