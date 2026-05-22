@@ -42,6 +42,7 @@ function onSubmit(event) {
         return;
       }
       createGallery(photo);
+      event.target.reset();
     })
     .catch(error => {
       iziToast.show({
@@ -52,5 +53,4 @@ function onSubmit(event) {
     .finally(() => {
       hideLoader();
     });
-  event.target.reset();
 }
