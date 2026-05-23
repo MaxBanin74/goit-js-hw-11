@@ -10,5 +10,5 @@ export function getImagesByQuery(query) {
     orientation: 'horizontal',
     safesearch: true,
   };
-  return axios.get(BASE_URL, { params });
+  return axios.get(BASE_URL, { params }).then(response => response.data.hits);
 }

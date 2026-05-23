@@ -31,8 +31,7 @@ function onSubmit(event) {
   }
   showLoader();
   getImagesByQuery(queryElem.value)
-    .then(response => {
-      const photo = response.data.hits;
+    .then(photo => {
       if (!photo.length) {
         iziToast.show({
           message:
